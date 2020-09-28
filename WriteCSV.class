@@ -14,11 +14,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * 
- *
- */
 public class WriteCSV {
+	/**
+	 * CSV first line header
+	 */
+	private static final String CSVHEADER="isbn,bookTitle,course";
+	/**
+	 * csv file path
+	 */
 	private String csvFilePath;
 
 	public WriteCSV() {
@@ -28,6 +31,10 @@ public class WriteCSV {
 		this.csvFilePath = csvFilePath;
 	}
 
+	/**
+	 * @param csvLine : Array of csvline and line must be the value "isbnValue,bookTitleValue,courseValue"
+	 * @param append : whether append data to csv file , true : append, false : cover
+	 */
 	public void batchWrite(String[] csvLine, boolean append) {
 		this.batchWrite(Arrays.asList(csvLine).stream().map(line -> new CourseReading(line.split(",")))
 				.collect(Collectors.toList()), append);
@@ -41,6 +48,8 @@ public class WriteCSV {
 		FileWriter fw = null;
 		try {
 			fw = new FileWriter(new File(this.csvFilePath), append);
+			if(!append)
+				fw.write(CSVHEADER+"\n");
 			for (CourseReading info : data) {
 				fw.write(info.toCSVContent() + "\n");
 			}
@@ -59,10 +68,21 @@ public class WriteCSV {
 
 	}
 
+	/**
+	 * @param isbn
+	 * @param bookTitle
+	 * @param course
+	 * @param append  : whether append data to csv file , true : append, false : cover
+	 */
 	public void write(int isbn, String bookTitle, String course, boolean append) {
 		this.write(new CourseReading(isbn, bookTitle, course), append);
 	}
 
+	/**
+	 * write one object to csv file
+	 * @param info 
+	 * @param append
+	 */
 	public void write(CourseReading info, boolean append) {
 		this.batchWrite(Arrays.asList(info), append);
 	}
