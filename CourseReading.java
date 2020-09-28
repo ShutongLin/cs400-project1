@@ -46,7 +46,7 @@ class CourseReading {
 
 	
         /**
-	 * isbn,bookTitle,course  getter and setter
+	 * isbn,bookTitle,course getter and setter
 	 * */
 	public int getIsbn() {
 		return isbn;
