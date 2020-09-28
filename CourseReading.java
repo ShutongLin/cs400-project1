@@ -7,11 +7,29 @@
 // Lecturer: <Gary Dahl>
 // Notes to Grader: <optional extra notes>
 //-------------------------------------------------------------------------Not finish yet-----------------------------------------------------------------------------------------
+
+/**
+ *	CourseReading Object
+ */
 class CourseReading {
+	/**
+	 * isbn value
+	 */
 	private int isbn;
+	/**
+	 * bookTitle value
+	 */
 	private String bookTitle;
+	/**
+	 * course value
+	 */
 	private String course;
 
+	/**
+	 * @param isbn
+	 * @param bookTitle
+	 * @param course
+	 */
 	public CourseReading(int isbn, String bookTitle, String course) {
 		super();
 		this.isbn = isbn;
@@ -19,10 +37,17 @@ class CourseReading {
 		this.course = course;
 	}
 
+	/**
+	 * @param csvLineContent : csvLineContent[0] is isbn , csvLineContent[1] is bookTitle, csvLineContent[0] is course
+	 */
 	public CourseReading(String[] csvLineContent) {
 		this(Integer.parseInt(csvLineContent[0]), csvLineContent[1], csvLineContent[2]);
 	}
 
+	
+        /**
+	 * isbn,bookTitle,course  getter and setter
+	 * */
 	public int getIsbn() {
 		return isbn;
 	}
@@ -47,6 +72,10 @@ class CourseReading {
 		this.course = course;
 	}
 
+	/**
+	 * change to csv file style
+	 * @return
+	 */
 	public String toCSVContent() {
 		return String.join(",", String.valueOf(this.isbn), this.bookTitle, this.course);
 	}
