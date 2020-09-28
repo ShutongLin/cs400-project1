@@ -6,3 +6,64 @@
 // TA: <Brianna (Bri) Cochran>
 // Lecturer: <Gary Dahl>
 // Notes to Grader: <optional extra notes>
+//---------------------------------------------------------------Not finish yet----------------------------------------------------------------------------
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ * 
+ *
+ */
+public class WriteCSV {
+	private String csvFilePath;
+
+	public WriteCSV() {
+	}
+
+	public WriteCSV(String csvFilePath) {
+		this.csvFilePath = csvFilePath;
+	}
+
+	public void batchWrite(String[] csvLine, boolean append) {
+		this.batchWrite(Arrays.asList(csvLine).stream().map(line -> new CourseReading(line.split(",")))
+				.collect(Collectors.toList()), append);
+	}
+
+	/**
+	 * @param data : list of CourseReading
+	 * @param append : whether append data to csv file , true : append, false : cover
+	 */
+	public void batchWrite(List<CourseReading> data, boolean append) {
+		FileWriter fw = null;
+		try {
+			fw = new FileWriter(new File(this.csvFilePath), append);
+			for (CourseReading info : data) {
+				fw.write(info.toCSVContent() + "\n");
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		} finally {
+			if (fw != null) {
+				try {
+					fw.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+
+				}
+			}
+		}
+
+	}
+
+	public void write(int isbn, String bookTitle, String course, boolean append) {
+		this.write(new CourseReading(isbn, bookTitle, course), append);
+	}
+
+	public void write(CourseReading info, boolean append) {
+		this.batchWrite(Arrays.asList(info), append);
+	}
+}
