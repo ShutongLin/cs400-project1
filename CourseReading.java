@@ -6,7 +6,7 @@
 // TA: <Brianna (Bri) Cochran>
 // Lecturer: <Gary Dahl>
 // Notes to Grader: <optional extra notes>
-//-------------------------------------------------------------------------Not finish yet-----------------------------------------------------------------------------------------
+//------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //For this project, data wrangler 1 will create three class, CourseReading, ReadCSV, and WriteCSV class and share will other teeammates.
