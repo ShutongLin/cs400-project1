@@ -8,6 +8,8 @@
 // Notes to Grader: <optional extra notes>
 //-------------------------------------------------------------------------Not finish yet-----------------------------------------------------------------------------------------
 
+
+//For this project, we will create three class, CourseReading, ReadCSV, and WriteCSV class.
 /**
  *	CourseReading Object
  */
