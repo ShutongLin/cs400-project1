@@ -9,7 +9,7 @@
 //-------------------------------------------------------------------------Not finish yet-----------------------------------------------------------------------------------------
 
 
-//For this project, we will create three class, CourseReading, ReadCSV, and WriteCSV class.
+//For this project, data wrangler 1 will create three class, CourseReading, ReadCSV, and WriteCSV class and share will other teeammates.
 /**
  *	CourseReading Object
  */
