@@ -17,7 +17,7 @@ class CourseReading {
 	/**
 	 * isbn value
 	 */
-	private long isbn;
+	private String isbn;
 	/**
 	 * bookTitle value
 	 */
@@ -32,7 +32,7 @@ class CourseReading {
 	 * @param bookTitle
 	 * @param course
 	 */
-	public CourseReading(long isbn, String bookTitle, String course) {
+	public CourseReading(String isbn, String bookTitle, String course) {
 		super();
 		this.isbn = isbn;
 		this.bookTitle = bookTitle;
@@ -43,7 +43,7 @@ class CourseReading {
 	 * @param csvLineContent : csvLineContent[0] is isbn , csvLineContent[1] is bookTitle, csvLineContent[0] is course
 	 */
 	public CourseReading(String[] csvLineContent) {
-		this(Long.parseLong(csvLineContent[0]), csvLineContent[1], csvLineContent[2]);
+		this(String.parseString(csvLineContent[0]), csvLineContent[1], csvLineContent[2]);
 	}
 
 	
@@ -55,11 +55,11 @@ class CourseReading {
 		return bookTitle;
 	}
 
-	public long getIsbn() {
+	public String getIsbn() {
 		return isbn;
 	}
 
-	public void setIsbn(long isbn) {
+	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
 
