@@ -14,7 +14,7 @@
  */
 class CourseReading {
 	/**
-	 * isbn value
+	 * ISBN value
 	 */
 	private String ISBN;
 	/**
@@ -39,7 +39,7 @@ class CourseReading {
 	}
 
 	/**
-	 * @param csvLineContent : csvLineContent[0] is isbn , csvLineContent[1] is bookTitle, csvLineContent[2] is course
+	 * @param csvLineContent : csvLineContent[0] is ISBN , csvLineContent[1] is bookTitle, csvLineContent[2] is course
 	 */
 	public CourseReading(String[] csvLineContent) {
 		this(String.valueOf(csvLineContent[0]), csvLineContent[1], csvLineContent[2]);
