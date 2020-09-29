@@ -16,7 +16,7 @@ class CourseReading {
 	/**
 	 * isbn value
 	 */
-	private String isbn;
+	private String ISBN;
 	/**
 	 * bookTitle value
 	 */
@@ -27,13 +27,13 @@ class CourseReading {
 	private String course;
 
 	/**
-	 * @param isbn
+	 * @param ISBN
 	 * @param bookTitle
 	 * @param course
 	 */
-	public CourseReading(String isbn, String bookTitle, String course) {
+	public CourseReading(String ISBN, String bookTitle, String course) {
 		super();
-		this.isbn = isbn;
+		this.ISBN = ISBN;
 		this.bookTitle = bookTitle;
 		this.course = course;
 	}
@@ -47,7 +47,7 @@ class CourseReading {
 
 	
 	/**
-	 * isbn,bookTitle,course  getter and setter
+	 * ISBN,bookTitle,course  getter and setter
 	 * */
 
 	public String getBookTitle() {
@@ -55,11 +55,11 @@ class CourseReading {
 	}
 
 	public String getIsbn() {
-		return isbn;
+		return ISBN;
 	}
 
 	public void setIsbn(String isbn) {
-		this.isbn = isbn;
+		this.ISBN = ISBN;
 	}
 
 	public void setBookTitle(String bookTitle) {
@@ -79,7 +79,7 @@ class CourseReading {
 	 * @return
 	 */
 	public String toCSVContent() {
-		return String.join(",", String.valueOf(this.isbn), this.bookTitle, this.course);
+		return String.join(",", String.valueOf(this.ISBN), this.bookTitle, this.course);
 	}
 
 }
