@@ -18,7 +18,7 @@ public class WriteCSV {
 	/**
 	 * CSV first line header
 	 */
-	private static final String CSVHEADER="ISBN,bookTitle,course";
+	private static final String CSVHEADER="isbn,bookTitle,course";
 	/**
 	 * csv file path
 	 */
@@ -69,13 +69,13 @@ public class WriteCSV {
 	}
 
 	/**
-	 * @param ISBN
+	 * @param isbn
 	 * @param bookTitle
 	 * @param course
 	 * @param append  : whether append data to csv file , true : append, false : cover
 	 */
-	public void write(String ISBN, String bookTitle, String course, boolean append) {
-		this.write(new CourseReading(ISBN, bookTitle, course), append);
+	public void write(long isbn, String bookTitle, String course, boolean append) {
+		this.write(new CourseReading(isbn, bookTitle, course), append);
 	}
 
 	/**
