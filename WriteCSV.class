@@ -74,7 +74,7 @@ public class WriteCSV {
 	 * @param course
 	 * @param append  : whether append data to csv file , true : append, false : cover
 	 */
-	public void write(long isbn, String bookTitle, String course, boolean append) {
+	public void write(String isbn, String bookTitle, String course, boolean append) {
 		this.write(new CourseReading(isbn, bookTitle, course), append);
 	}
 
