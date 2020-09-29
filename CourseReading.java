@@ -9,7 +9,6 @@
 //------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-//For this project, data wrangler 1 will create three class, CourseReading, ReadCSV, and WriteCSV class and share will other teeammates.
 /**
  *	CourseReading Object
  */
@@ -40,10 +39,10 @@ class CourseReading {
 	}
 
 	/**
-	 * @param csvLineContent : csvLineContent[0] is isbn , csvLineContent[1] is bookTitle, csvLineContent[0] is course
+	 * @param csvLineContent : csvLineContent[0] is isbn , csvLineContent[1] is bookTitle, csvLineContent[2] is course
 	 */
 	public CourseReading(String[] csvLineContent) {
-		this(String.parseString(csvLineContent[0]), csvLineContent[1], csvLineContent[2]);
+		this(String.valueOf(csvLineContent[0]), csvLineContent[1], csvLineContent[2]);
 	}
 
 	
