@@ -29,7 +29,7 @@ class CourseReading {
 	private String course;
 
 	/**
-	 * @param isbn
+	 * @param ISBN
 	 * @param bookTitle
 	 * @param course
 	 */
