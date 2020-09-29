@@ -16,9 +16,9 @@
 
 class CourseReading {
 	/**
-	 * isbn value
+	 * ISBN value
 	 */
-	private long isbn;
+	private long ISBN;
 	/**
 	 * bookTitle value
 	 */
@@ -33,9 +33,9 @@ class CourseReading {
 	 * @param bookTitle
 	 * @param course
 	 */
-	public CourseReading(long isbn, String bookTitle, String course) {
+	public CourseReading(long ISBN, String bookTitle, String course) {
 		super();
-		this.isbn = isbn;
+		this.ISBN = ISBN;
 		this.bookTitle = bookTitle;
 		this.course = course;
 	}
@@ -56,12 +56,12 @@ class CourseReading {
 		return bookTitle;
 	}
 
-	public long getIsbn() {
-		return isbn;
+	public long getISBN() {
+		return ISBN;
 	}
 
-	public void setIsbn(long isbn) {
-		this.isbn = isbn;
+	public void setISBN(long ISBN) {
+		this.ISBN = ISBN;
 	}
 
 	public void setBookTitle(String bookTitle) {
@@ -81,7 +81,7 @@ class CourseReading {
 	 * @return
 	 */
 	public String toCSVContent() {
-		return String.join(",", String.valueOf(this.isbn), this.bookTitle, this.course);
+		return String.join(",", String.valueOf(this.ISBN), this.bookTitle, this.course);
 	}
 
 }
