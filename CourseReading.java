@@ -18,7 +18,7 @@ class CourseReading {
 	/**
 	 * ISBN value
 	 */
-	private long ISBN;
+	private String ISBN;
 	/**
 	 * bookTitle value
 	 */
@@ -33,7 +33,7 @@ class CourseReading {
 	 * @param bookTitle
 	 * @param course
 	 */
-	public CourseReading(long ISBN, String bookTitle, String course) {
+	public CourseReading(String ISBN, String bookTitle, String course) {
 		super();
 		this.ISBN = ISBN;
 		this.bookTitle = bookTitle;
@@ -56,11 +56,11 @@ class CourseReading {
 		return bookTitle;
 	}
 
-	public long getISBN() {
+	public String getISBN() {
 		return ISBN;
 	}
 
-	public void setISBN(long ISBN) {
+	public void setISBN(String ISBN) {
 		this.ISBN = ISBN;
 	}
 
